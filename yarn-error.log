@@ -1,0 +1,40 @@
+Arguments: 
+  /home/yetim/.nvm/versions/node/v16.13.0/bin/node /usr/share/yarn/bin/yarn.js --json
+
+PATH: 
+  /home/yetim/Desktop/projects/vue/music/node_modules/.bin:/home/yetim/Desktop/projects/vue/node_modules/.bin:/home/yetim/Desktop/projects/node_modules/.bin:/home/yetim/Desktop/node_modules/.bin:/home/yetim/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/home/yetim/.nvm/versions/node/v16.13.0/bin:/home/yetim/Desktop/projects/vue/node_modules/.bin:/home/yetim/Desktop/projects/node_modules/.bin:/home/yetim/Desktop/node_modules/.bin:/home/yetim/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/home/yetim/.nvm/versions/node/v16.13.0/bin:/home/yetim/.nvm/versions/node/v16.13.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/yetim/.config/composer/vendor/bin:/home/yetim/.config/composer/vendor/bin
+
+Yarn version: 
+  1.22.15
+
+Node version: 
+  16.13.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)
+
+npm manifest: 
+  {
+    "name": "music",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+      "@vue/cli-plugin-babel": "~4.5.0",
+      "@vue/cli-plugin-router": "~4.5.0",
+      "@vue/cli-plugin-vuex": "~4.5.0",
+      "@vue/cli-plugin-eslint": "~4.5.0",
+      "@vue/cli-plugin-unit-jest": "~4.5.0",
+      "@vue/cli-plugin-e2e-cypress": "~4.5.0",
+      "@vue/cli-service": "~4.5.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
