@@ -5,11 +5,20 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    authModalShow: false,
   },
   mutations: {
+    toggleAuthModal: (state) =>
+    {
+      state.authModalShow = ! state.authModalShow
+          }
   },
   actions: {
   },
   modules: {
+  },
+  getters: {
+    getAuthModalShow: (state) =>  state.authModalShow 
+        
   }
 })
