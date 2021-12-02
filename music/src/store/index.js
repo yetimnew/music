@@ -17,8 +17,8 @@ export default new Vuex.Store({
   },
   modules: {
   },
-  getters: {
-    getAuthModalShow: (state) =>  state.authModalShow 
+  // getters: {
+  //   authModalShow: (state) =>  state.authModalShow 
         
-  }
+  // }
 })

@@ -50,7 +50,7 @@
               class="modal-close cursor-pointer z-50"
               @click.prevent="toggleAuthModal"
             >
-              <i class="fas fa-times">X</i>
+              <i class="fas fa-times"></i>
             </div>
           </div>
 
@@ -69,6 +69,7 @@
                   bg-blue-600
                 "
                 href="#"
+                @click.prevent="tab = 'login'"
                 >Login</a
               >
             </li>
@@ -76,13 +77,14 @@
               <a
                 class="block rounded py-3 px-4 transition hover:text-blue-600"
                 href="#"
+                @click.prevent="tab = 'register'"
                 >Register</a
               >
             </li>
           </ul>
 
           <!-- Login Form -->
-          <form>
+          <form v-show="tab === 'login'">
             <!-- Email -->
             <div class="mb-3">
               <label class="inline-block mb-2">Email</label>
@@ -141,7 +143,7 @@
             </button>
           </form>
           <!-- Registration Form -->
-          <form>
+          <form v-show="tab === 'register'">
             <!-- Name -->
             <div class="mb-3">
               <label class="inline-block mb-2">Name</label>
@@ -295,13 +297,20 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapMutations, mapGetters, mapState } from "vuex";
 export default {
   name: "Auth",
+  data() {
+    return {
+      tab: "login",
+    };
+  },
   computed: {
-    authModalShow() {
-      return this.$store.getters.getAuthModalShow;
-    },
+    // authModalShow() {
+    //   return this.$store.getters.getAuthModalShow;
+    // },
+    // ...mapGetters(["authModalShow"]),
+    ...mapState(["authModalShow"]),
   },
   methods: {
     ...mapMutations(["toggleAuthModal"]),
